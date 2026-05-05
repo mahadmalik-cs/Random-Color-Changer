@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Changer</title>
+
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎨 Background Color Changer</h1>
+
+  <button id="btn">Change Color</button>
+
+  <script>
+    let button = document.getElementById("btn");
+
+    button.addEventListener("click", function() {
+      let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+      document.body.style.backgroundColor = randomColor;
+    });
+  </script>
+
+</body>
+</html>
